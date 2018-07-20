@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fn = function(a){
+            console.log('fn....');
+        }
+        var pro = new Proxy(fn,{
+            apply(target,ctx,args){  //target:监测的函数  args:值
+                console.log('apply调用');
+                console.log('fn将要被调用');
+                Reflect.apply(...arguments);
+            }
+        })
+        pro(1);
+    </script>
+</body>
+</html>
