@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=3;
+        var b=5;
+        console.log(`${a}+${b}=${a+b}`);
+
+        var str = 'asdasd';
+        console.log(str.includes('a'));
+
+        function sw(str,start){
+            if(str.indexOf(start) == 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        console.log(sw('abcd','a'));
+
+
+        String.prototype.sw = function(str){
+            if(this.indexOf(str) == 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        var str = 'asdad';
+        console.log(str.sw('as'));
+        
+        String.prototype.ew = function(str){
+            if(this.lastIndexOf(str) + str.length == this.length){
+                return true;
+            }
+            return false;
+        }
+        var str='safsggas';
+        console.log(str.ew('as'));
+    </script>
+</body>
+</html>

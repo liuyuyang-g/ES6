@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+        <li>44</li>
+    </ul>
+    <script>
+        /* function aa([x,y]){
+            return x+y;
+        }
+        aa([3,4]);
+
+        function bb([x,y=5]){
+            console.log(y);
+        }
+        bb([3]); */  /* 输出8 */
+        /* 不传值或者传一个undefined 用默认值 */
+
+        let cc = () => {
+            
+        }
+
+        /* var aLi = document.querySelectorAll('li');
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].onclick = function(){
+                setTimeout(function(){
+                    console.log(this);  // window
+                },200)
+            }
+        } */
+
+        /* var aLi = document.querySelectorAll('li');
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].onclick = function(){
+                setTimeout(() => {
+                    console.log(this);  //对应点击的值  
+                },200)
+            }
+        } */
+
+        /* var person = {
+            name:'zs',
+            say:() => {
+                console.log(this);  //window
+                aa = () => {
+                    console.log(this);  //window  
+                }
+                aa();
+            }
+        }
+        person.say(); */
+
+        function aa(){
+            console.log(arguments);
+        }
+        aa(1,2,3,4);
+
+        let dd = (...rest) => {
+            console.log(rest);
+        }
+        dd(1,2,3,4);
+    </script>
+</body>
+</html>

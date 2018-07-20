@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <script>
+        var aLi = document.querySelectorAll('li');
+
+        var arr = Array.from(aLi);
+        console.log(arr);
+
+        var arr = new Array(3);
+        console.log(arr.fill(7));
+
+        let arr1 = ['a','b','c','d'];
+        for(a of arr1){
+            console.log(a); //输出值
+        }
+        for(a of arr1.keys()){
+            console.log(a); //输出索引
+        }
+        for([key,val] of arr1.entries()){
+            console.log(key,val);   //输出索引和值
+        }
+    </script>
+</body>
+</html>
